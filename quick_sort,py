@@ -1,0 +1,19 @@
+def quick_sort(arr):  # 快速排序
+    """
+    时间复杂度：O(nlogn)
+    """
+    if len(arr) < 2:  # 基线条件
+        return arr
+    less = []
+    greater = []
+    equal = []
+    for i in arr:
+        if i > arr[0]:
+            greater.append(i)
+        elif i < arr[0]:
+            less.append(i)
+        else:
+            equal.append(i)
+    return quick_sort(less)+equal+quick_sort(greater)  # 将大小两部分再分别使用快排
+    
+   
