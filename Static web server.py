@@ -55,11 +55,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-
-# WSGI接口以实现动态网页，操作步骤：
-# 在框架内导入需要实现的模块
-# m = __import__(file_name)   # 模块导入
-# m.application(environ,start_reponse)  # 调用该模块，该模块将相应体传回
-# 模块内的响应头通过传进去的start_response方法传回来
-# start_response方法主要用于处理模块内传递回来的响应头
-# 在模块内主要通过application来return响应体
