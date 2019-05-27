@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- head标签内一般就包含meta标签以及title标签 -->
+    <!-- meta全局申明标签 -->
+    <meta charset="UTF-8">
+    <title>html标签入门</title>
+</head>
+
+<body>
+    <p>
+    <!-- body标签算是html的内容主体 -->
+    <h1 id="top">h1是大标题，总共有六级标题</h1>
+    <a href="#bottom">到末尾</a>
+    <br />
+    <h2>二级标题</h2>
+    使用img标签中的src属性来插入图片：<a href="./0贴图/91.jpg" target="_blank"><img src="./0贴图/28.jpg" alt="me" id="pic"></a>
+    <h3 id="third title">三级标题</h3>
+    <p>
+        p是段落标签，专门用于定义网络上的一段文字
+        <br>br标签是换行&nbsp;&nbsp;&amp;&nbsp;&nbsp;空格需要用到字符实体
+    </p>
+    <p>
+        这是第二段文字，啦啦啦啦啦啦<br>
+        P标签之后是默认有一行间隔的，而div标签之后是没有间隔的<br>
+        大于号：&gt;<br>
+        小于号：&lt;<br>
+    </p>
+    <div>块标签div，没有具体的含义和样式，表示html中的某一块内容<br>
+        <span>
+            行标签span，也没有具体的含义和样式，表示某一行内容，如果之后需要为某段中的几个文字做一小段样式，则可以使用此span标签
+        </span>
+    </div>
+    <h3>含样式和语义的标签</h3>
+    <p>
+        1.em标签 行内元素，表示语气中的<em>强调词</em><br>
+        2.i标签 行内元素 ，表示<i>专业词汇</i><br>
+        3.b标签 行内元素，表示文档中的<b>关键词或者产品名</b><br>
+        4.strong标签 行内元素，表示<strong>非常重要的内容</strong><br><br>
+        5.ul/li标签表示列表，<br><br>
+        6.a标签表示链接，<a href="http://www.baidu.com/" title="baidu.com">baidu</a>一般都会在a标签中加入href属性来指向一个地址。
+        还可以加入title属性，当鼠标移向链接时，会出现提示信息<br>
+        当要使用图片做链接时，可以直接用a标签将img标签包起来即可<br>
+        当属性为href="#"时，可以直接使页面回到顶部<br>
+        还可以设置锚点实现页面内的跳转，在其他标签处添加id或name标签，在a标签里添加href="#+id/name"即可跳转<a href="#pic">点我看图</a>
+        a标签中还有一个target属性默认为target="_self"，即当前页面直接跳转到目标连接，可设置为target="_blank"在新窗口打开链接
+        <br>
+        7.dl/dt/dd表示定义列表等<br>
+    </p>
+
+    <a href="#" id="bottom">回到顶部</a>&nbsp;<a href="#top">到大标题</a>
+
+    <!-- 快捷键：dl>(dt+dd)*3 tab一下 -->
+    <dl>
+        <dt>html</dt>
+        <dd>负责页面的结构</dd>
+
+        <dt>css</dt>
+        <dd>负责页面的表现布局</dd>
+
+        <dt>JavaScript</dt>
+        <dd>负责页面的行为</dd>
+    </dl>
+    <div>
+        8.列表分为有序列表和无序列表<br/>
+         有序列表：（开发中使用较少）<br/>
+        <ol>
+            <li>列表文字一</li>
+            <li>列表文字二</li>
+            <li>列表文字三</li>
+        </ol>
+         无序列表：（使用较多）<br/>
+        <ul>
+            <li>列表文字一</li>
+            <li>列表文字二</li>
+            <li>列表文字三</li>
+        </ul>
+    </div>
+    <div>
+        9.table标签定义一个表格，th标签定义表头，tr标签定义表格的一行，td定义一行中的一个格子<br/>
+         border属性决定边框的粗细，width与height定义表格宽高<br/>
+         align 属性设置水平对齐，valign属性设置垂直对齐<br/>
+         colspan 设置单元格水平合并，rowspan 设置单元格垂直合并<br/.
+        <br/>
+
+        3*3表格：
+        <table border="10" width="100" height="100">
+            <tr valign="middle">
+                <th>1</th> <th>2</th> <th>3</th>
+            </tr>
+            <tr align="right" valign="top">
+                <td>1</td> <td>2</td> <td>3</td>
+            </tr>
+            <tr align="center" valign="bottom">
+                <td>1</td> <td>2</td> <td>3</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        10.表单form标签，action标签来定义表单最终提交的地址，method方法来决定表单提交的方式（post/get）<br/>
+         input标签内可选type属性有text（文本框）、password（密码）、radio（选项）、checkbox（多选框）、file（上传文件）、
+         submit（提交控件，value属性定义按钮上的文字）、reset（重置）、botton（按钮）<br/>
+         select标签内的option标签来定义下拉框选项、textarea标签定义多行文本<br/>
+         input内的value属性可以给文本框赋予默认值
+        <br/>
+        <br/>
+        <form action="https://www.baidu.com/" method="get">
+            <div>
+                <label for="user">用户名</label>
+                <input type="text" name="user" id="user">
+                <!--设置for属性后，点用户名三个字也可以激活文本输入框，否则只能点击文本框才能激活输入，for属性与id属性值要一致-->
+            </div>
+            <br/>
+            <div>
+                <label for="pwd">密码</label>
+                <input type="password" name="pwd" id="pwd">
+            </div>
+            <br/>
+            <div>
+                <label>性别</label>
+                <input type="radio" name="gender" id="male" value="1"><label for="male">男</label>
+                <input type="radio" name="gender" id="female" value="0"><label for="female">女</label>
+                <input type="radio" name="gender" id="baomi" value="2"><label for="baomi">保密</label>
+                <!--设置了相同的name属性值后，两个选项才会互斥，否则可同时选择两个选项-->
+            </div>
+            <br/>
+            <div>
+                <label>籍贯</label>
+                <select name="" id="">
+                    <option value="1">上海</option>
+                    <option value="0">北京</option>
+                    <option value="2">深圳</option>
+                </select>
+            </div>
+            <br/>
+            <div>
+                <label>爱好</label>
+                <input type="checkbox" name="hobby" value="game">打游戏
+                <input type="checkbox" name="hobby" value="shopping">购物
+                <input type="checkbox" name="hobby" value="sleep">睡觉
+                <input type="checkbox" name="hobby" value="read">读书
+            </div>
+            <br/>
+            <div>
+                <label>上传照片</label>
+                <input type="file" name="file">
+            </div>
+            <br/>
+            <div>
+                <label>自我介绍</label>
+                <textarea name="info">请输入文字</textarea>
+            </div>
+            <input type="submit" value="提交">&nbsp<input type="reset" value="重置">
+            <input type="hidden" value="hidden不会显示，但是会自动地提交一些设定好的值">
+        </form>
+    </div>
+
+
+</body>
+</html>
+
